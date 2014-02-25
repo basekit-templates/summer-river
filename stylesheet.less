@@ -1,0 +1,259 @@
+/*	===============================
+	Table of Contents
+	===============================
+	- Colour Swatches
+	- Font Swatches
+	- Boostrap Import
+	- Template Styles
+		1.  Globals
+		2.  Header
+		3.  Navigation
+		4.  Home
+		5.  Menu
+		6.  Blog List
+		7.  Blog Post
+		8.  Forms
+		9.  Gallery / Images
+		10.  Footer
+		11. Misc
+		12. Responsive
+	=============================== */
+
+/*	===============================
+	Colour Swatches
+	===============================	
+	"color1":"#4a979d", == Background
+	"color2":"#4a979d", == Contrast colour
+	"color3":"#4a979d", == Button colour
+	"color4":"#3e3e3e", == Title colour
+	"color5":"#7e7e7e", == Paragraph colour
+	"color6":"#3e3e3e", == Nav text colour
+	"color7":"#ffffff"  == Header BG colour
+	=============================== */
+
+/*	===============================
+	Font Swatches
+	===============================	
+	"font1":  == Heading 1
+	"font2":  == Heading 2
+	"font3":  == Heading 3
+	"font4":  == Heading 4
+	"font5":  == Paragraph
+	"font6":  == Navigation Text
+	"font7":  == Buttons
+	"font8":  == Feature Title
+	"font9":  == Feature Subtitle
+	"font10": == Logo
+	=============================== */
+
+
+
+/*	===============================
+	Bootstrap import
+	=============================== */
+@import "@{templateCommon}/basekit-bootstrap.less";
+
+
+/*	===============================
+	Template Styles
+	=============================== */
+
+// 1. Globals
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Lato', sans-serif;
+	font-weight:300;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+body {
+	height: 2200px;
+}
+
+a {
+	color: #a7a7a7;
+	text-decoration: none;
+	&:hover {
+		color: darken(#a7a7a7, 30%);
+		text-decoration: none;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	letter-spacing: .2em;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+}
+
+h4 {
+	color: #829697;
+}
+
+h1 {
+	font-size: 38px;
+}
+
+h2 {
+	font-size: 16px;
+	letter-spacing: .2em;
+}
+
+// 2. Header
+
+.header {
+	position: relative;
+	color: white;
+
+	overflow: hidden;
+	position: relative;
+	.aside {
+		float: left;
+		width: 50%;
+		padding: 20px 40px;
+	}
+	.address1 {
+		text-align: left;
+	}
+	.address2 {
+		text-align: right;
+	}
+}
+
+.header-feature {
+	position: relative;
+	height: 600px;
+}
+
+.header-bg {
+	background: url('img/header-bg.jpg') no-repeat center;
+	background-attachment: fixed;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	border: 20px solid white;
+	border-bottom-width: 0;
+}
+
+.header-content {
+	position: absolute;
+	text-align: center;
+	z-index: 1;
+
+	width: 100%;
+	height: 100%;
+}
+
+#parallax {
+	margin-top: 100px;
+	position: absolute;
+	width: 100%;
+}
+
+// 3. Navigation
+
+.nav {
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	
+	position: relative;
+	text-align: center;
+	padding: 0 20px;
+	ul {
+		display: block;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		border-bottom: 1px solid #f4f4f4;
+	}
+	li {
+		display: inline-block;
+	}
+	a {
+		padding: 20px 25px;
+		display: inline-block;
+	}
+}
+
+// 4. Home
+
+
+// 5. Menu
+
+.menu {
+	margin: 0 20px;
+	text-align: center;
+	overflow: hidden;
+	h1 {
+		position: relative;
+		&:after {
+			font-size: 16px;
+			font-weight: 300;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			bottom: -150%;
+			left: 50%;
+			width: 50px;
+			margin-left: -25px;
+			position: absolute;
+			content: "X";
+		}
+	}
+	h2 {
+		position: relative;
+		display: inline-block;
+		&:before, &:after {
+			z-index: 1;
+			display: block;
+			content: "";
+			position: absolute;
+			top: 52%;
+			right: 110%;
+			width: 1000%;
+			height: 1px;
+			background: #b7b7b7;
+		}
+		&:after {
+			left: 110%;
+		}
+	}
+}
+
+.menu-items {
+	-webkit-column-count: 3;
+	* {
+		-webkit-column-break-inside: avoid;
+	}
+}
+
+.menu-item {
+	padding: 10px 40px;
+}
+
+// 6. Blog List
+
+// 7. Blog Post
+
+// 8. Forms
+
+// 9. Gallery / Images
+
+// 10. Footer
+
+// 11. Misc
+
+// 12. Responsive
