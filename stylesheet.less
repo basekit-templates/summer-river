@@ -14,7 +14,7 @@
 		7.  Blog Post
 		8.  Forms
 		9.  Gallery / Images
-		10.  Footer
+		10. Footer
 		11. Misc
 		12. Responsive
 	=============================== */
@@ -47,7 +47,6 @@
 	=============================== */
 
 
-
 /*	===============================
 	Bootstrap import
 	=============================== */
@@ -60,107 +59,206 @@
 
 // 1. Globals
 
-* {
-	box-sizing: border-box;
+html{
+	height:100%;
+	min-height:100%;
+}
+body{
+	min-height:100%;
 }
 
 html, body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 300;
-	-webkit-font-smoothing: antialiased;
-	font-family: 'Lato', sans-serif;
-	font-weight:300;
-	font-size: 14px;
-	line-height: 24px;
+	background-color: @color-swatch1;
+	
+	font-family:@font-swatch5-font-family;
+	font-weight: @font-swatch5-font-weight;
+	color:@font-swatch5-color;
+	line-height:@font-swatch5-line-height;
+	letter-spacing: @font-swatch5-letter-spacing;
+	font-size: @font-swatch5-font-size;
 }
 
-body {
-	height: 2200px;
+h1 {
+	font-family:@font-swatch1-font-family; 
+	font-weight: @font-swatch1-font-weight; 
+	color:@font-swatch1-color; 
+	line-height:@font-swatch1-line-height; 
+	letter-spacing: @font-swatch1-letter-spacing; 
+	font-size: @font-swatch1-font-size;
+	a {
+		font-family:@font-swatch1-font-family; 
+		font-weight: @font-swatch1-font-weight; 
+		line-height:@font-swatch1-line-height; 
+		letter-spacing: @font-swatch1-letter-spacing; 
+		font-size: @font-swatch1-font-size;
+	}
+}
+
+h2 {
+	font-family:@font-swatch2-font-family; 
+	font-weight: @font-swatch2-font-weight; 
+	color:@font-swatch2-color; 
+	line-height:@font-swatch2-line-height; 
+	letter-spacing: @font-swatch2-letter-spacing; 
+	font-size: @font-swatch2-font-size;
+	a {
+		font-family:@font-swatch2-font-family; 
+		font-weight: @font-swatch2-font-weight; 
+		line-height:@font-swatch2-line-height; 
+		letter-spacing: @font-swatch2-letter-spacing; 
+		font-size: @font-swatch2-font-size;
+	}
+}
+
+h3 {
+	font-family:@font-swatch3-font-family; 
+	font-weight: @font-swatch3-font-weight; 
+	color:@font-swatch3-color; 
+	line-height:@font-swatch3-line-height; 
+	letter-spacing: @font-swatch3-letter-spacing; 
+	font-size: @font-swatch3-font-size;
+	a {
+		font-family:@font-swatch3-font-family; 
+		font-weight: @font-swatch3-font-weight; 
+		line-height:@font-swatch3-line-height; 
+		letter-spacing: @font-swatch3-letter-spacing; 
+		font-size: @font-swatch3-font-size;
+	}
+}
+
+h4 {
+	font-family:@font-swatch4-font-family; 
+	font-weight: @font-swatch4-font-weight; 
+	color:@font-swatch4-color; 
+	line-height:@font-swatch4-line-height; 
+	letter-spacing: @font-swatch4-letter-spacing; 
+	font-size: @font-swatch4-font-size;
+	a {
+		font-family:@font-swatch4-font-family; 
+		font-weight: @font-swatch4-font-weight; 
+		line-height:@font-swatch4-line-height; 
+		letter-spacing: @font-swatch4-letter-spacing; 
+		font-size: @font-swatch4-font-size;
+	}
+}
+
+h5 {
+	font-family:@font-swatch5-font-family;
+	font-weight: @font-swatch5-font-weight;
+	color:@font-swatch5-color;
+	line-height:@font-swatch5-line-height;
+	letter-spacing: @font-swatch5-letter-spacing;
+	font-size: @font-swatch5-font-size;
+	a {
+		font-family:@font-swatch5-font-family;
+		font-weight: @font-swatch5-font-weight;
+		line-height:@font-swatch5-line-height;
+		letter-spacing: @font-swatch5-letter-spacing;
+		font-size: @font-swatch5-font-size;
+	}
+}
+
+h6 {
+	font-family:@font-swatch6-font-family;
+	font-weight: @font-swatch6-font-weight;
+	color:@font-swatch6-color;
+	line-height:@font-swatch6-line-height;
+	letter-spacing: @font-swatch6-letter-spacing;
+	font-size: @font-swatch6-font-size;
+	a {
+		font-family:@font-swatch6-font-family;
+		font-weight: @font-swatch6-font-weight;
+		line-height:@font-swatch6-line-height;
+		letter-spacing: @font-swatch6-letter-spacing;
+		font-size: @font-swatch6-font-size;		
+	}
+}
+
+p,
+.contactform label,
+.twitter ul li a,
+.signupform label {
+	font-family:@font-swatch5-font-family;
+	font-weight: @font-swatch5-font-weight;
+	color:@font-swatch5-color;
+	line-height:@font-swatch5-line-height;
+	letter-spacing: @font-swatch5-letter-spacing;
+	font-size: @font-swatch5-font-size;
 }
 
 a {
-	color: #a7a7a7;
+	color: @color-swatch2;
 	text-decoration: none;
 	&:hover {
-		color: darken(#a7a7a7, 30%);
+		color: darken(@color-swatch2, 30%);
 		text-decoration: none;
 	}
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 400;
-	letter-spacing: .2em;
-	text-transform: uppercase;
-	font-family: 'Oswald', sans-serif;
+.main {
+	max-width: 960px;
+	margin: 0 auto;
+	clear: both;
 }
 
-h4 {
-	color: #829697;
-}
-
-h1 {
-	font-size: 38px;
-}
-
-h2 {
-	font-size: 16px;
-	letter-spacing: .2em;
+hr.line {
+	background-color: lighten(@color-swatch5, 75%)
 }
 
 // 2. Header
 
-.header {
+.template-header {
 	position: relative;
-	color: white;
+	color: @color-swatch1;
 
 	overflow: hidden;
 	position: relative;
-	.aside {
-		float: left;
+	.template-aside {
+		position: absolute;
 		width: 50%;
-		padding: 20px 40px;
+		padding: 20px 25px;
 	}
-	.address1 {
+	.left {
+		top: 0;
+		left: 0;
 		text-align: left;
 	}
-	.address2 {
+	.right {
+		top: 0;
+		right: 0;
 		text-align: right;
+	}
+	h1, h2 {
+		color: @color-swatch1;
+	}
+	.widget.companyname a {
+		color: @color-swatch1;
 	}
 }
 
 .header-feature {
 	position: relative;
 	height: 600px;
+	overflow: hidden;
 }
 
-.header-bg {
-	background: url('img/header-bg.jpg') no-repeat center;
-	background-attachment: fixed;
+#header-fixed {
+	background: image('/img/header-bg.jpg') no-repeat center bottom;
 	background-size: cover;
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	top: 0;
-	border: 20px solid white;
+	border: 20px solid @color-swatch1;
 	border-bottom-width: 0;
 }
 
-.header-content {
-	position: absolute;
-	text-align: center;
-	z-index: 1;
-
-	width: 100%;
-	height: 100%;
-}
 
 #parallax {
 	margin-top: 100px;
 	position: absolute;
 	width: 100%;
+	text-align: center;
 }
 
 // 3. Navigation
@@ -189,6 +287,40 @@ h2 {
 		display: inline-block;
 	}
 }
+
+.template-nav {
+	padding: 0 20px;
+	float: left;
+	width: 100%;
+}
+
+.widget .extendednavigation {
+	text-align: center;
+	float: left;
+	width: 100%;
+	border-bottom: 1px solid lighten(@font-swatch6-color, 30%);
+}
+
+.widget .extendednavigation ul {
+	max-width: 960px;
+	margin: 0 auto;
+	li {
+		float: none;
+		text-align: center;
+		display: inline-block;
+		a {
+			padding: 10px 20px;
+			font-family:@font-swatch6-font-family;
+			font-weight: @font-swatch6-font-weight;
+			color:@font-swatch6-color;
+			line-height:@font-swatch6-line-height;
+			letter-spacing: @font-swatch6-letter-spacing;
+			font-size: @font-swatch6-font-size;
+		}
+	}
+}
+
+
 
 // 4. Home
 
@@ -221,7 +353,7 @@ h2 {
 			display: block;
 			content: "";
 			position: absolute;
-			top: 52%;
+			top: 40%;
 			right: 110%;
 			width: 1000%;
 			height: 1px;
@@ -233,15 +365,22 @@ h2 {
 	}
 }
 
-.menu-items {
-	-webkit-column-count: 3;
-	* {
-		-webkit-column-break-inside: avoid;
+.menu-item {
+	padding: 10px 40px;
+}
+
+.menu-item-price {
+	p {
+		font-family:@font-swatch4-font-family;
+		font-weight:@font-swatch4-font-weight;
+		line-height:@font-swatch4-line-height;
+		letter-spacing:@font-swatch4-letter-spacing;
 	}
 }
 
-.menu-item {
-	padding: 10px 40px;
+.menu-subsection,
+.menu-item-promoted {
+	background-color: lighten(@color-swatch2, 50%);
 }
 
 // 6. Blog List
@@ -249,8 +388,110 @@ h2 {
 // 7. Blog Post
 
 // 8. Forms
+input[type=text],
+input[type=email],
+input[type=search],
+.signupform fieldset input[type=email],
+.widget.profile form fieldset input[type=email],
+textarea {
+	text-indent: 0;
+	height: auto;
+	background: darken(@color-swatch1, 5%);
+	border: 1px solid darken(@color-swatch1, 10%);
+	border-radius: 2px;
+	line-height:@font-swatch5-line-height;
+	font-size:@font-swatch5-font-size;
+	padding: 8px 10px;
+	&:focus {
+		border: 1px solid darken(@color-swatch1, 15%);
+	}	
+}
+
+textarea {
+	resize: vertical;
+}
+
+.contactform button.btn,
+button.btn,
+.widget.profile form button,
+.widget.paypalbuynow .widget.button.paypal,
+.widget.tweet a,
+.widget.dropbox button,
+.clicktocall a,
+.signupform fieldset button,
+.blog-search-form button,
+.widget.socialicons span a,
+.widget.profile .bk-profile-socialicons span a {
+	-webkit-font-smoothing: inherit;
+	border: 1px solid @color-swatch3;
+	border-radius: 2px;
+	color: @color-swatch1;
+	background-color: lighten(@color-swatch3, 5%);
+	line-height:@font-swatch5-line-height;
+	font-size:@font-swatch5-font-size;
+	font-family:@font-swatch5-font-family;
+	&:hover {
+		background-color: @color-swatch3;
+	}
+}
+
+.widget.socialicons span a,
+.widget.profile .bk-profile-socialicons span a {
+	border-radius: 100%;
+}
+
+.clicktocall a,
+.blog-search-form button,
+.widget.profile form button,
+.signupform fieldset button {
+	padding: 8px 14px;
+}
+
+input[type="search"]::-webkit-search-decoration {
+	display: none;
+}
 
 // 9. Gallery / Images
+
+.widget.gallery {
+	margin: 0;
+}
+
+.widget.responsiveslideshow .slideshow-widget-controls .dot {
+	border-radius: 100%;
+	&.selected {
+		background-color: @color-swatch2;
+		border-width: 4px;
+	}
+}
+
+.widget.gallery ul li span.inner,
+.blog-post-feature-image-wrap,
+.menu-item-image-wrap,
+.widget.map {
+	border: 1px solid @color-swatch3;
+	border-radius: 2px;
+}
+
+.blog-post-feature-image-wrap,
+.menu-item-image-wrap {
+	width: 100%;
+	height: 200px;
+	line-height: 0;
+	background-size: cover;
+	background-position: center;
+	img {
+		display: none;
+	}
+}
+
+.blog-post-feature-image-wrap {
+	height: 350px;
+}
+
+.menu-item-image-wrap {
+	height: 200px;
+}
 
 // 10. Footer
 

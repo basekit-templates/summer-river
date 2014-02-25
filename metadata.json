@@ -10,12 +10,12 @@
     "colorSwatches":
     {
         "Swatch 1": {
-            "color1":"#4a979d",
-            "color2":"#4a979d",
-            "color3":"#4a979d",
-            "color4":"#3e3e3e",
-            "color5":"#7e7e7e",
-            "color6":"#3e3e3e",
+            "color1":"#ffffff",
+            "color2":"#829697",
+            "color3":"#94bfc1",
+            "color4":"#669595",
+            "color5":"#313131",
+            "color6":"#232323",
             "color7":"#ffffff"
         },
         "Swatch 2": {
@@ -59,7 +59,7 @@
        "title": "Futura",
         "font1": {
             "font-family": "\"Oswald\", Arial, sans-serif",
-            "font-size": "42px",
+            "font-size": "38px",
             "font-weight": "400",
             "line-height": "52px",
             "color": "@color-swatch4",
@@ -75,24 +75,24 @@
         },
         "font3": {
             "font-family": "\"Oswald\", Arial, sans-serif",
-            "font-size": "32px",
-            "font-weight": "300",
+            "font-size": "23px",
+            "font-weight": "400",
             "line-height": "42px",
             "color": "@color-swatch2",
-            "letter-spacing": "inherit"
+            "letter-spacing": "1px"
         },
         "font4": {
             "font-family": "\"Oswald\", Arial, sans-serif",
-            "font-size": "28px",
+            "font-size": "18px",
             "font-weight": "300",
-            "line-height": "38px",
+            "line-height": "28px",
             "color": "@color-swatch5",
-            "letter-spacing": "inherit"
+            "letter-spacing": "1px"
         },
         "font5": {
             "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
             "font-size": "14px",
-            "font-weight": "300",
+            "font-weight": "400",
             "line-height": "24px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit"
@@ -100,13 +100,13 @@
         "font6": {
             "font-family": "\"Oswald\", Arial, sans-serif",
             "font-size": "18px",
-            "font-weight": "400",
+            "font-weight": "300",
             "line-height": "28px",
-            "color": "@color-swatch4",
-            "letter-spacing": "inherit",
-            "color-hover": "@color-swatch5",
-            "background-color": "@color-swatch7",
-            "background-color-hover": "@color-swatch2"
+            "color": "@color-swatch2",
+            "letter-spacing": "1px",
+            "color-hover": "@color-swatch3",
+            "background-color": "@color-swatch1",
+            "background-color-hover": "@color-swatch1"
          },
         "font7": {
             "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
