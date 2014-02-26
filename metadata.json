@@ -82,12 +82,12 @@
             "letter-spacing": "1px"
         },
         "font4": {
-            "font-family": "\"Oswald\", Arial, sans-serif",
-            "font-size": "18px",
-            "font-weight": "300",
-            "line-height": "28px",
-            "color": "@color-swatch5",
-            "letter-spacing": "1px"
+            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
+            "font-size": "16px",
+            "font-weight": "600",
+            "line-height": "22px",
+            "color": "@color-swatch2",
+            "letter-spacing": "inherit"
         },
         "font5": {
             "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",

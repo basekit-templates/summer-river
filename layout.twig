@@ -26,13 +26,12 @@
 
 	</head>
 
-	<body class="{{ page.backgroundClass }}">
-
+	<body id="image-fixed" class="{{ page.backgroundClass }}">
 
 		<div class="page-wrap">
 		
 			{% include "header.twig" %}
-
+			
 			{% block content %}
 			{% endblock %}
 
@@ -55,6 +54,7 @@
 					parallax.style["-webkit-backface-visibility"] = "hidden";
 					
 				document.getElementById("header-fixed").style.top = (window.pageYOffset)+"px";
+				document.getElementById("image-fixed").style.backgroundPosition = "center "+(window.pageYOffset)+"px";
 			}
 		</script>
 
