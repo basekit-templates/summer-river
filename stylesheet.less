@@ -302,8 +302,9 @@ hr.line {
 }
 
 .widget .extendednavigation ul {
-	max-width: 960px;
+	max-width: 1000px;
 	margin: 0 auto;
+	float: none;
 	li {
 		float: none;
 		text-align: center;
@@ -317,6 +318,9 @@ hr.line {
 			letter-spacing: @font-swatch6-letter-spacing;
 			font-size: @font-swatch6-font-size;
 		}
+	}
+	li.folder:after {
+		border-top-color: @font-swatch6-color;
 	}
 }
 
@@ -334,15 +338,14 @@ hr.line {
 	h1 {
 		position: relative;
 		&:after {
-			font-size: 16px;
-			font-weight: 300;
-			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-			bottom: -150%;
+			color: lighten(@color-swatch5, 60%);
+			font-weight: 100;
+			bottom: -13px;
 			left: 50%;
 			width: 50px;
 			margin-left: -25px;
 			position: absolute;
-			content: "X";
+			content: "\00D7";
 		}
 	}
 	h2 {
@@ -380,7 +383,21 @@ hr.line {
 
 .menu-subsection,
 .menu-item-promoted {
-	background-color: lighten(@color-swatch2, 50%);
+	background-color: lighten(@color-swatch2, 42%);
+	border-radius: 2px;
+}
+
+.menu .menu-subsection li {
+	overflow: hidden;
+}
+
+.menu .menu-items li.menu-item-promoted {
+	padding: 5px 15px 12px;
+}
+
+.menu .menu-section-item-dietary-props .dietary-icon,
+.menu .menu-info .dietary-icon {
+	border-bottom: 1px solid ligthen(@color-swatch2, 20%);
 }
 
 // 6. Blog List
@@ -388,6 +405,13 @@ hr.line {
 // 7. Blog Post
 
 // 8. Forms
+label,
+.signupform fieldset label {
+	display: block;
+	padding-top: 10px;
+	margin-bottom: 0;
+}
+
 input[type=text],
 input[type=email],
 input[type=search],
@@ -411,6 +435,12 @@ textarea {
 	resize: vertical;
 }
 
+.widget.profile form fieldset input,
+.signupform fieldset input,
+input[type=search] {
+	width: 91%;
+}
+
 .contactform button.btn,
 button.btn,
 .widget.profile form button,
@@ -430,6 +460,7 @@ button.btn,
 	line-height:@font-swatch5-line-height;
 	font-size:@font-swatch5-font-size;
 	font-family:@font-swatch5-font-family;
+	cursor: pointer;
 	&:hover {
 		background-color: @color-swatch3;
 	}
@@ -451,17 +482,66 @@ input[type="search"]::-webkit-search-decoration {
 	display: none;
 }
 
+.widget.clicktocall a {
+	display: inline-block;
+}
+
 // 9. Gallery / Images
 
 .widget.gallery {
 	margin: 0;
 }
 
+.widget.responsiveslideshow .slideshow-widget {
+	.btn-prev, .btn-next {
+		text-indent: 1000px;
+		overflow: hidden;
+		height: 30px;
+		width: 30px;
+		border: 2px solid @color-swatch2;
+		background-color: fadeout(@color-swatch2, 50%);
+		border-radius: 100%;
+	}
+}
+
+.widget.responsiveslideshow {
+	.btn-prev, .btn-next {
+		opacity: .25;
+	}
+	&:hover {
+		.btn-prev, .btn-next {
+			opacity: .75;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+	.content-wrapper {
+		background: fadeout(@color-swatch1, 50%);
+		.title {
+			font-weight: @font-swatch3-font-weight;
+			&:after {
+				content: ":";
+			}
+		}
+		.title, .description {
+			color: @color-swatch5;
+		}
+		.title {
+			padding-right: 0;
+			padding-left: 6px;
+		}
+		.description {
+			padding-left: 0;
+		}
+	}
+}
+
 .widget.responsiveslideshow .slideshow-widget-controls .dot {
 	border-radius: 100%;
 	&.selected {
 		background-color: @color-swatch2;
-		border-width: 4px;
+		border-width: 3px;
 	}
 }
 
