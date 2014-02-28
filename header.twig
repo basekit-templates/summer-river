@@ -1,6 +1,6 @@
 <header class="template-header">
 	<div class="header-feature">
-		<div id="header-fixed">
+		<div class="header-fixed">
 			<aside class="template-aside left">
 				<h2>{{widget('profile', 'lefttopwidget', { 'profileType': 'address' })|raw}}</h2>
 			</aside>
@@ -8,10 +8,7 @@
 				<h2>{{widget('profile', 'righttopwidget', { 'profileType': 'strapline' })|raw}}</h2>
 			</aside>
 		</div>
-		<div id="parallax" class="template-logo">
-			{{widget('logo', 'logo', {"defaultlogo": asset('img/logo.png')})|raw}}
-			<h1>{{widget('companyname', 'companyname', {"business": "Lorem Ipsum"})|raw}}</h1>
-		</div>
+		{{widget('feature', 'parallax', {"header": "profile", "strapline":"profile", "buttonText":"", "defaultBgImg": asset('images/feature-bg.jpg'), 'showBtn': true})|raw}}	
 	</div>
 </header>
 

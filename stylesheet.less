@@ -64,8 +64,6 @@ html {
 }
 body {
 	min-height:100%;
-	background: image('/img/header-bg.jpg') no-repeat center top;
-	background-size: 100% auto;
 }
 
 html, body {
@@ -219,9 +217,6 @@ hr.line {
 
 	overflow: hidden;
 	position: relative;
-	.template-aside {
-		position: absolute;
-	}
 	.left {
 		top: 0;
 		left: 0;
@@ -243,6 +238,7 @@ hr.line {
 .template-aside {
 	width: 50%;
 	padding: 20px 25px;
+	position: relative;
 	float: left
 }
 
@@ -257,19 +253,26 @@ hr.line {
 	}
 }
 
-#header-fixed {
+.header-fixed {
 	width: 100%;
 	height: 100%;
-	position: absolute;
+	position: fixed;
 	top: 0;
+	left: 0;
+	z-index: 1;
+	padding: 20px;
 }
 
+.widget.feature .feature-bgimg {
+	background-size: 100%;
+	background-position: center top !important;
+}
 
 #parallax {
-	margin-top: 35px;
 	position: absolute;
 	width: 100%;
 	text-align: center;
+	height: 100%;
 }
 
 // 3. Navigation
@@ -361,9 +364,6 @@ hr.line {
 		.logo img {
 			max-width: 100%;
 		}
-	}
-	#parallax {
-		margin-top: 80px;
 	}
 }
 
@@ -744,9 +744,6 @@ input[type="search"]::-webkit-search-decoration {
 		height: 275px;
 		.logo img {
 			max-width: 120px;
-		}
-		#parallax {
-			margin-top: 50px;
 		}
 	}
 	.template-header .template-aside {

@@ -49,11 +49,9 @@
 			
 			window.onscroll = function pxParallax() {
 				var parallax = document.getElementById("parallax");
-					parallax.style.top = (window.pageYOffset/20)*30+"px";
-					parallax.style["-webkit-backface-visibility"] = "hidden";
+					parallax.style.height = ((window.pageYOffset/20)*60)+600+"px";
 					
 				document.getElementById("header-fixed").style.top = (window.pageYOffset)+"px";
-				document.getElementById("image-fixed").style.backgroundPosition = "center "+(window.pageYOffset)+"px";
 			}
 		</script>
 
