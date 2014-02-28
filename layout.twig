@@ -50,7 +50,6 @@
 			window.onscroll = function pxParallax() {
 				var parallax = document.getElementById("parallax");
 					parallax.style.top = (window.pageYOffset/20)*30+"px";
-					parallax.style["-webkit-filter"] = "blur("+(window.pageYOffset/50)*1+"px)";
 					parallax.style["-webkit-backface-visibility"] = "hidden";
 					
 				document.getElementById("header-fixed").style.top = (window.pageYOffset)+"px";
