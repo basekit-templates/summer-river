@@ -39,6 +39,16 @@
 			});
 		</script>
 		<script type="text/javascript">
+			var headerHeight = document.getElementById("header-feature").offsetHeight;
+
+			window.onscroll = function emParallax() {
+				var feature = $(".header-feature .widget.feature")[0];
+				
+				if(typeof feature === 'object') {
+					feature.style.height = ((window.pageYOffset / 20) * 60) + headerHeight + "px";
+				}
+			}
+
 			!function() {
 				function supportsSVG() {
 					return !!document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect
@@ -46,15 +56,6 @@
 				if (supportsSVG()) document.documentElement.className += ' svg'
 			}();
 
-			var headerHeight = document.getElementById("header-feature").offsetHeight,
-				feature = $(".header-feature .widget.feature");
-			window.onscroll = function emParallax() {
-				console.log([feature, headerHeight]);
-				if(typeof feature === 'object') {
-					console.log([window.pageYOffset, headerHeight]);
-					feature.height(((window.pageYOffset / 20) * 60) + headerHeight + "px");
-				}
-			}
 		</script>
 
 	</body>
