@@ -199,13 +199,15 @@ a {
 	float: left;
 	width: 100%;
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 }
 .main {
 	max-width: 1000px;
 	margin: 0 auto;
 	padding: 0 20px;
 	clear: both;
+	position: relative;
+	z-index: 2;
 }
 
 hr.line {
@@ -266,7 +268,6 @@ hr.line {
 
 .header-fixed {
 	width: 100%;
-	height: 100%;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -755,6 +756,10 @@ input[type="search"]::-webkit-search-decoration {
 
 // 12. Responsive
 @media (max-width: 725px) {
+	.widget.feature .feature-bgimg,
+	.home .widget.feature .feature-bgimg {
+		height: 275px;
+	}
 	.header-feature,
 	.home .header-feature {
 		height: 275px;
