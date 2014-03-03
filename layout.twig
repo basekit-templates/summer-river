@@ -39,13 +39,14 @@
 			});
 		</script>
 		<script type="text/javascript">
-			var headerHeight = document.getElementById("header-feature").offsetHeight;
-
-			window.onscroll = function emParallax() {
-				var feature = $(".header-feature .widget.feature")[0];
+			var headerHeight = document.getElementById("header-feature").offsetHeight,
+				feature = $(".header-feature .widget.feature")[0],
+				innerFeature = $(".header-feature .widget.feature .feature-bgimg")[0];
 				
+			window.onscroll = function emParallax() {
 				if(typeof feature === 'object') {
 					feature.style.height = ((window.pageYOffset / 20) * 60) + headerHeight + "px";
+					innerFeature.style.height = ((window.pageYOffset / 20) * 60) + headerHeight + "px";
 				}
 			}
 
