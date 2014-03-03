@@ -45,6 +45,7 @@
 				
 			window.onscroll = function emParallax() {
 				if(typeof feature === 'object') {
+					console.log(window.pageYOffset);
 					feature.style.height = ((window.pageYOffset / 20) * 60) + headerHeight + "px";
 					innerFeature.style.height = ((window.pageYOffset / 20) * 60) + headerHeight + "px";
 				}
