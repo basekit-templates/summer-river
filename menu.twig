@@ -1,6 +1,8 @@
 {% extends "layout.twig" %}
 {% block content %}
 
+{% include "header.twig" %}
+
 <section class="section main menu-page">
 	{{widget('menusections', 'menusections1', {})|raw}}
 	{{widget('menu', 'menu1', {})|raw}}
