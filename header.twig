@@ -1,5 +1,5 @@
 <header class="template-header">
-	<div class="header-feature">
+	<div id="header-feature" class="header-feature">
 		<div class="header-fixed">
 			<aside class="template-aside left">
 				<h2>{{widget('profile', 'lefttopwidget', { 'profileType': 'address' })|raw}}</h2>
@@ -8,7 +8,7 @@
 				<h2>{{widget('profile', 'righttopwidget', { 'profileType': 'strapline' })|raw}}</h2>
 			</aside>
 		</div>
-		{{widget('feature', 'parallax', {"header": "profile", "strapline":"profile", "buttonText":"", "defaultBgImg": asset('images/feature-bg.jpg'), 'showBtn': true})|raw}}	
+		{{widget('feature', 'parallax', {"header": "profile", "strapline":"profile", "buttonText":"", "defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '20', 'showBtn': true})|raw}}	
 	</div>
 </header>
 

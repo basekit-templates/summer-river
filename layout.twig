@@ -46,12 +46,9 @@
 				}
 				if (supportsSVG()) document.documentElement.className += ' svg'
 			}()
-			
-			window.onscroll = function pxParallax() {
-				var parallax = document.getElementById("parallax");
-					parallax.style.height = ((window.pageYOffset/20)*60)+600+"px";
-					
-				document.getElementById("header-fixed").style.top = (window.pageYOffset)+"px";
+			var HeaderHeight = document.getElementById("header-feature").offsetHeight;
+			window.onscroll = function emParallax() {
+				document.getElementById("parallax").style.height = ((window.pageYOffset/20)*60)+HeaderHeight+"px";
 			}
 		</script>
 
