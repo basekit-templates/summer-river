@@ -6,7 +6,22 @@
 		{% include "head.twig" %}
 		
 		{% include basekit.headScript %}
-		
+
+	</head>
+
+	<body id="image-fixed" class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
+
+		<div class="page-wrap">
+
+			{% block content %}
+			{% endblock %}
+
+			{% include "footer.twig" %}
+
+		</div>
+		{% include basekit.bodyScript %}
+
+
 		<script type="text/javascript">
 			$(function() {
 				$('a[href*=#]:not([href=#])').click(function() {
@@ -23,34 +38,23 @@
 				});
 			});
 		</script>
-
-	</head>
-
-	<body id="image-fixed" class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
-
-		<div class="page-wrap">
-
-			{% block content %}
-			{% endblock %}
-
-			{% include "footer.twig" %}
-
-		</div>
-		
 		<script type="text/javascript">
 			!function() {
 				function supportsSVG() {
 					return !!document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect
 				}
 				if (supportsSVG()) document.documentElement.className += ' svg'
-			}()
-			var HeaderHeight = document.getElementById("header-feature").offsetHeight;
+			}();
+
+			var headerHeight = document.getElementById("header-feature").offsetHeight,
+				feature = $(".header-feature .widget.feature")[0];
+				console.log(feature);
 			window.onscroll = function emParallax() {
-				document.getElementById("featurehome").style.height = ((window.pageYOffset/20)*60)+HeaderHeight+"px";
+				if(typeof feature === 'object') {
+					feature.style.height = ((window.pageYOffset / 20) * 60) + headerHeight + "px";
+				}
 			}
 		</script>
-
-		{% include basekit.bodyScript %}
 
 	</body>
 </html>
