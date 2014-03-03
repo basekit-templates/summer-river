@@ -47,12 +47,12 @@
 			}();
 
 			var headerHeight = document.getElementById("header-feature").offsetHeight,
-				feature = $(".header-feature .widget.feature")[0];
+				feature = $(".header-feature .widget.feature");
 			window.onscroll = function emParallax() {
 				console.log([feature, headerHeight]);
 				if(typeof feature === 'object') {
 					console.log([window.pageYOffset, headerHeight]);
-					feature.style.height = ((window.pageYOffset / 20) * 60) + headerHeight + "px";
+					feature.height(((window.pageYOffset / 20) * 60) + headerHeight + "px");
 				}
 			}
 		</script>
