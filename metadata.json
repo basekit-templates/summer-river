@@ -116,7 +116,7 @@
             "color": "@color-swatch7",
             "letter-spacing": "inherit",
             "background-color": "@color-swatch2",
-            "background-color-hover": "darken(@color-swatch7,10%)"
+            "background-color-hover": "darken(@color-swatch2,10%)"
         },
         "font8": {
             "font-family": "\"Oswald\", Arial, sans-serif",
