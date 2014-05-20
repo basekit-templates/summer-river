@@ -1,0 +1,10 @@
+{% extends "layout.twig" %}
+{% block content %}
+
+{% include "header.twig" %}
+
+<section class="section main bloglist-page">
+	{{widget('blogpostlist', 'blogpostlist1', {})|raw}}
+</section>
+
+{% endblock %}
